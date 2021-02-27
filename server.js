@@ -17,7 +17,6 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-
 if (process.env.NODE_ENV === "production") {
   mongoose.connect(process.env.MONGODB_URI,  {
     useNewUrlParser: true,
@@ -27,7 +26,7 @@ if (process.env.NODE_ENV === "production") {
   });
 } else {
   mongoose.connect("mongodb://localhost/reactreadinglist",  {
-    useNewUrlParser: true,
+  useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false
